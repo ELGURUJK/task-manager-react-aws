@@ -1,0 +1,37 @@
+# --- DEPENDENCIAS ---
+node_modules/         # Librerías instaladas por npm/yarn
+backend/node_modules/
+frontend/node_modules/
+
+# --- BUILD / COMPILADOS ---
+/frontend/build       # Build final de React (se genera en deploy)
+/frontend/.cache      # Caché de compilación de React
+/backend/dist         # Si usamos algún bundler para lambdas
+
+# --- AMBIENTE Y SECRETOS ---
+.env                  # Variables de entorno raíz
+frontend/.env
+backend/.env
+*.pem                 # Claves privadas (certificados)
+*.key
+*.aws/                # Credenciales AWS
+.aws/
+
+# --- LOGS ---
+*.log                 # Logs generales
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend/lambda/*.log
+
+# --- CONFIGURACIONES DE EDITOR ---
+.vscode/              # Configuración local VSCode
+.idea/                # Configuración local JetBrains
+*.swp                 # Swap files (editores como Vim)
+.DS_Store             # MacOS metadata
+Thumbs.db             # Windows metadata
+
+# --- CI/CD ---
+.github/*.tmp         # Archivos temporales en workflows
+coverage/             # Reportes de coverage (si hacemos tests)
