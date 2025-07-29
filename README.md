@@ -3,4 +3,9 @@ Modern Web Application for task management (To-Do List) with a React fronted, an
 
 
 
-cp .env.example .env
+## Variables de entorno
+Este proyecto requiere un archivo `.env` basado en `.env.example`.  
+1. Copia el archivo:
+   ```bash
+   cp .env.example .env
+
